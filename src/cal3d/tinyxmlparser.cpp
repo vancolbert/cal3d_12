@@ -976,10 +976,6 @@ const char* TiXmlAttribute::Parse( const char* p, TiXmlParsingData* data )
 	p = SkipWhiteSpace( p );
 	if ( !p || !*p ) return 0;
 
-	int tabsize = 4;
-	if ( document )
-		tabsize = document->TabSize();
-
 //	TiXmlParsingData data( p, prevData );
 	if ( data )
 	{

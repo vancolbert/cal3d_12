@@ -611,10 +611,6 @@ CalSubmesh::blendMorphTargetScale(  const unsigned int& morphName,
                                     float rampValue,
                                     bool replace )
 {
-    int size = m_vectorMorphTargetWeight.size();
-
-
-
     CalCoreSubMorphTarget * target = m_pCoreSubmesh->getCoreSubMorphTarget( morphName );
     CalMorphTargetType mtype = target->getMorphTargetType();
     switch( mtype )
@@ -690,7 +686,7 @@ CalSubmesh::blendMorphTargetScale(  const unsigned int& morphName,
             int attenuator = m_vectorSubMorphTargetGroupAttenuator[ subMorphTargetGroupIndex ];
             if( attenuator != -1 )   // i.e., if group is exclusive
             {
-                if( attenuator != morphName )   // If I'm not the attenuator, then I get attenuated.
+                if( attenuator != (int)morphName )   // If I'm not the attenuator, then I get attenuated.
                 {
                     attenuatedWeight *= m_vectorSubMorphTargetGroupAttenuation[ subMorphTargetGroupIndex ];
                 }

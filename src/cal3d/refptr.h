@@ -97,7 +97,7 @@ namespace cal3d
 
         T* get() const
         {
-            assert(!m_ptr || m_ptr->getRefCount() > 0 &&
+            assert((!m_ptr || m_ptr->getRefCount() > 0) &&
                    "Dereferencing pointer with refCount <= 0");
             return m_ptr;
         }

@@ -231,7 +231,7 @@ CalCoreTrack::compress( double translationTolerance, double rotationToleranceDeg
     if( keyLinkArray ) {
       delete [] keyLinkArray;
     }
-    keyLinkArray = new( KeyLink [ numFrames ] );
+    keyLinkArray = new KeyLink[numFrames];
     arrayLen = numFrames;
   }
   unsigned int i;
@@ -348,7 +348,7 @@ CalCoreTrack::collapseSequences( double translationTolerance, double rotationTol
     if( keyLinkArray ) {
       delete [] keyLinkArray;
     }
-    keyLinkArray = new( KeyLink [ numFrames ] );
+    keyLinkArray = new KeyLink[numFrames];
     arrayLen = numFrames;
   }
   unsigned int i;

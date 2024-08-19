@@ -198,7 +198,7 @@ bool CalMorphTargetMixer::clear(int id, float delay)
                     }
                     else
                     {
-                        for(int i=0; i<track->getNumTargetSubMeshes(); i++)
+                        for(int i=0; i<(int)track->getNumTargetSubMeshes(); i++)
                         {
                             submeshes[track->getTargetSubMesh(i)]->setMorphTargetWeight(track->getMorphID(), 0);
 
@@ -257,8 +257,8 @@ const std::string& CalMorphTargetMixer::getMorphName(int id) const
     {
         return morph->getName();
     }
-
-    return "";
+    static std::string empty = "";
+    return empty;
 }
 
 /*****************************************************************************/
@@ -293,8 +293,8 @@ const std::list<CalCoreMorphTrack>& CalMorphTargetMixer::getMorphTracks(int id) 
     {
         return morph->getListCoreTrack();
     }
-
-    return std::list<CalCoreMorphTrack>();
+    static std::list<CalCoreMorphTrack> empty;
+    return empty;
 }
 
 /*****************************************************************************/
@@ -536,7 +536,7 @@ void CalMorphTargetMixer::SetTrackWeights(const CalCoreAnimatedMorph& morph, Mor
         }
         else
         {
-            for(int i=0; i<track->getNumTargetSubMeshes(); i++)
+            for(int i=0; i<(int)track->getNumTargetSubMeshes(); i++)
             {
                 submeshes[track->getTargetSubMesh(i)]->setMorphTargetWeight(track->getMorphID(), weight);
 

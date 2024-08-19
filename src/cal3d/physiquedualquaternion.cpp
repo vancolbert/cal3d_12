@@ -56,7 +56,7 @@ static void CalcMorphBlendedPosition( CalSubmesh *pSubmesh, int vertexID,
     outPosition = baseWeight * vertex.position;
 
     int morphTargetId;
-    for (int i = 0; i < morphIDs.size(); ++i)
+    for (int i = 0; i < (int)morphIDs.size(); ++i)
     {
       morphTargetId = morphIDs[i];
       float currentWeight = pSubmesh->getMorphTargetWeight(morphTargetId);
@@ -88,7 +88,7 @@ static void CalcMorphBlendedNormal( CalSubmesh *pSubmesh, int vertexID,
     outNormal = baseWeight * vertex.normal;
 
     int morphTargetId;
-    for (int i = 0; i < morphIDs.size(); ++i)
+    for (int i = 0; i < (int)morphIDs.size(); ++i)
     {
       morphTargetId = morphIDs[i];
       float currentWeight = pSubmesh->getMorphTargetWeight(morphTargetId);
@@ -122,7 +122,7 @@ static void CalcMorphBlendedPositionAndNormal( CalSubmesh *pSubmesh, int vertexI
     outNormal = baseWeight * vertex.normal;
 
     int morphTargetId;
-    for (int i = 0; i < morphIDs.size(); ++i)
+    for (int i = 0; i < (int)morphIDs.size(); ++i)
     {
       morphTargetId = morphIDs[i];
       float currentWeight = pSubmesh->getMorphTargetWeight(morphTargetId);

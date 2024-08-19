@@ -1139,7 +1139,7 @@ bool CalSaver::saveCoreMorphTrack(std::ofstream& file, const std::string& strFil
       return false;
    }
    //save the target submeshes indices
-   for(int i = 0; i < pCoreMorphTrack->getNumTargetSubMeshes(); ++i)
+   for(int i = 0; i < (int)pCoreMorphTrack->getNumTargetSubMeshes(); ++i)
    {
         if(!CalPlatform::writeInteger(file,pCoreMorphTrack->getTargetSubMesh(i)))
        {

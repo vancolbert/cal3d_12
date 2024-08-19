@@ -558,7 +558,7 @@ EnlargeMiawCacheAsNecessary( unsigned int numElements )
 
       // Step up exponentially to reduce number of steps.
       MiawCacheNumElements = numElements * 2;
-      MiawCache = new( MorphIdAndWeight [ MiawCacheNumElements ] );
+      MiawCache = new MorphIdAndWeight[MiawCacheNumElements];
    }
 }
 
