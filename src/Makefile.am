@@ -12,11 +12,5 @@
 
 SUBDIRS = cal3d
 
-bin_PROGRAMS = cal3d_converter
-man_MANS = cal3d_converter.1
-
-cal3d_converter_SOURCES = cal3d_converter.cpp
-cal3d_converter_LDFLAGS = cal3d/libcal3d.la
-
 # ************************************************************************
 

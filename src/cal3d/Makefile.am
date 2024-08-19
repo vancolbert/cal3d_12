@@ -12,8 +12,6 @@
 
 INCLUDES = -I$(top_srcdir)/src
 
-EXTRA_DIST = cal3d.rc cal3d.dsp SConscript
-
 lib_LTLIBRARIES = libcal3d.la
 
 #

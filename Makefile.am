@@ -13,18 +13,8 @@
 
 AUTOMAKE_OPTIONS = foreign
 
-EXTRA_DIST = cal3d.dsw SConstruct \
-	macosx/cal3d.xcodeproj/dereka.mode1 \
-	macosx/cal3d.xcodeproj/dereka.pbxuser \
-	macosx/cal3d.xcodeproj/project.pbxproj \
-	macosx/English.lproj/InfoPlist.strings \
-	macosx/Info.plist
-
 MAINTAINERCLEANFILES = \
 	Makefile.in \
-	docs/Makefile.in \
-	docs/api/Makefile.in \
-	docs/shared/Makefile.in \
 	src/Makefile.in \
 	src/cal3d/Makefile.in \
 	aclocal.m4 \
@@ -39,7 +29,7 @@ MAINTAINERCLEANFILES = \
 	missing \
 	mkinstalldirs
 
-SUBDIRS = src docs tests
+SUBDIRS = src
 
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = cal3d.pc
