@@ -68,7 +68,7 @@ bool CalBufferSource::ok() const
 
 void CalBufferSource::setError() const
 {
-   CalError::setLastError(CalError::NULL_BUFFER, __FILE__, __LINE__);
+   CalError::setLastError(CalError::NULL_BUFFER, __FILE_NAME__, __LINE__);
 }
 
  /*****************************************************************************/

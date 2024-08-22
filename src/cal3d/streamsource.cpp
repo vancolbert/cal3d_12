@@ -69,7 +69,7 @@ bool CalStreamSource::ok() const
 
 void CalStreamSource::setError() const
 {
-   CalError::setLastError(CalError::INVALID_HANDLE, __FILE__, __LINE__);
+   CalError::setLastError(CalError::INVALID_HANDLE, __FILE_NAME__, __LINE__);
 }
 
 
